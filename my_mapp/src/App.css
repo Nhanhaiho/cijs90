@@ -1,0 +1,18 @@
+.header,.footer{
+  background-color: red;
+  height: 20px;
+}
+.sidebar{
+  width: 200px;
+  background-color: blue;
+
+}
+.content{
+  width: 100px;
+
+}
+.main_content{
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
