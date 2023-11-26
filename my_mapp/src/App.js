@@ -1,41 +1,73 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { createElement } from "react";
-import SideBar from "./components/SideBar";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Content from "./components/Content";
+
 // const divTag = createElement("div", { classname: "greeting" }, [
 //   createElement("h1", "", "heading1"),
 //   createElement("h2", "", "heading2"),
 //   createElement("h3", "", "heading3"),
 // ]);
-import Text from "./component2/Text";
-const age = 19
 function App() {
+
+  let count = 0;
+  const onClickCount = () => {
+ 
+    count++
+       console.log(count);
+  }
   return (
-    // <div className="body">
-    //   {/* <h1>{1 + 2}</h1>
-    //   <h2>{1 > 2 ? '1 lon hon 2' : '2 lon hon 1'}</h2>
-    //   <h3>{ age>=18?'dc xem phim 19+':'ko dc xem dau'}</h3> */}
-    //   <Header background="violet" height="200px" />
-    //   <Header background="purple" height="400px" />
-    //   <div className="main_content">
-    //     <SideBar background="gray" />
-    //     <Content />
-    //     <SideBar background="black" />
-    //   </div>
-    //   <Footer />
-    // </div>
     <div>
-      {/* <Text text="heading1" color="red" fontSize="12px" />
-      <Text text="heading2" color="blue" fontSize="30px" />
-      <Text text='heading3' color='grey' ></Text> */}
-      <Text>
-        <h3>heading3</h3>
-      </Text>
+      <h1>{count}</h1>
+      <button onClick={onClickCount}> Click me</button>
     </div>
   );
 }
 
 export default App;
+
+
+//  onClick={()=>sayHello("tom")} no tao ra ham moi de chay ham sayHello()
+
+//   function anotherFunction() {
+  //   return sayHello("tom")
+  // }
+  // return (
+  //   <div>
+  //     <button onClick={anotherFunction}>Say hello</button>
+//   </div>   co the dung cach nay cung dc
+  
+//  <label htmlFor="firstName">FirstName</label>   label khi co cai htmlfor ban chi can click vao label no se focus vao input
+//       <input id="firstName" onChange={onChange}></input>
+
+// <form onSubmit={handleSubmit}> giup ban submit
+// function App() {
+
+//   function handleSubmit(e) {
+//     e.preventDefault()
+//   console.log('submit')
+// }
+
+
+
+
+//   //  ham nay la gi tri cua attribute onsubmit()
+//   const handleSubmit = (e) => {
+//     // ngan chan hanh dong reload default cua form 
+//     e.preventDefault()
+//     // call data , api , blabla
+//     console.log(e)
+//     console.log('submit roi nha')
+//   }
+
+    // <form id="form" onSubmit={handleSubmit}>
+    //   <h1>login</h1>
+    //   <div>
+    //     <label htmlFor="firstName">FirstName</label>
+    //     <input id="firstName"></input>
+    //   </div>
+    //   <div>
+    //     <label htmlFor="lastName">lastName</label>
+    //     <input id="lastName"></input>
+    //   </div>
+    //   <button type="submit">submit</button>
+    // </form>
